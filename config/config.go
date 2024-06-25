@@ -7,6 +7,7 @@ import (
 
 type config struct {
 	RedisAddr string
+	Addr      string
 }
 
 var Cfg *config
@@ -17,5 +18,6 @@ func LoadConfig() {
 	}
 	Cfg = &config{
 		RedisAddr: os.Getenv("redis"),
+		Addr:      os.Getenv("ADDR"),
 	}
 }

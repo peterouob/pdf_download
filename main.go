@@ -19,5 +19,5 @@ func main() {
 
 	r := gin.Default()
 	r.POST("/", downloadController.Download)
-	r.Run(":8082")
+	r.Run(config.Cfg.Addr)
 }
